@@ -10,6 +10,9 @@
 # П.С. попытайтесь добить вывода информации о сотруднике также через перегрузку __str__
 # __str__(self) - вызывается функциями str, print и format. Возвращает строковое представление объекта.
 
+from unicodedata import name
+
+
 class Worker:
     def __init__(self, name: str, surname: str, position: str, wage: int, bonus: int):
         self.name = name
@@ -26,7 +29,7 @@ class Position(Worker):
         return sum(self._income.values())
 
 
-vasya = Position('Вася', 'Иванов', 'Программист', 100000, 20000)
-print(vasya.get_full_name())
-print(vasya.position)
-print(vasya.get_total_income())
+name = Position('Anton', 'Kulakov', 'programmer', 100000, 20000)
+print(name.get_full_name())
+print(name.position)
+print(name.get_total_income())
