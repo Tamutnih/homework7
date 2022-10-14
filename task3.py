@@ -20,6 +20,9 @@ class Worker:
         self.position = position
         self._income = {'wage': wage, 'bonus': bonus}
 
+    def __str__(self):
+        return 'salary'
+
 
 class Position(Worker):
     def get_full_name(self):
